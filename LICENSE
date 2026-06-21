@@ -1,0 +1,190 @@
+OKSI TOOL — PROPRIETARY SOFTWARE LICENSE AGREEMENT
+====================================================
+
+Copyright (c) 2026 OKSI. All Rights Reserved.
+
+Version 1.0 — Effective Date: 2026-06-21
+
+------------------------------------------------------------------------
+1. DEFINITIONS
+------------------------------------------------------------------------
+
+"Software"  refers to the OKSI TOOL application, including its bootloader,
+            tool modules, license server protocol, documentation, branding,
+            and any updates or derivative builds distributed by OKSI.
+
+"Licensor"  refers to OKSI, the sole owner and copyright holder of the
+            Software.
+
+"Licensee"  refers to the individual or entity that has obtained a valid
+            license key or premium activation through the official OKSI
+            distribution channels (oksi.dev or its authorized resellers).
+
+"License"   refers to the right granted under this Agreement to use the
+            Software within the scope defined below.
+
+------------------------------------------------------------------------
+2. GRANT OF LICENSE
+------------------------------------------------------------------------
+
+Subject to Licensee's full compliance with this Agreement and payment of
+the applicable fees, Licensor grants Licensee a non-exclusive,
+non-transferable, revocable, personal license to:
+
+  (a) Download and execute the official OKSI TOOL bootloader binary;
+  (b) Use the Software's features on a single hardware device (HWID-locked
+      to the device of first activation);
+  (c) Receive updates and security patches for the duration of the active
+      license period (Starter: 1 month, Pro: 3 months, Lifetime: perpetual
+      for the lifetime of the Software product line).
+
+The Free tier of the Software is licensed under the same terms, except no
+payment is required and access to features may be limited at Licensor's
+discretion.
+
+------------------------------------------------------------------------
+3. RESTRICTIONS
+------------------------------------------------------------------------
+
+Licensee shall NOT, under any circumstances:
+
+  (a) Copy, redistribute, resell, sublicense, lease, lend, rent, or
+      otherwise transfer the Software or any portion thereof to any third
+      party;
+  (b) Reverse engineer, decompile, disassemble, deobfuscate, or otherwise
+      attempt to derive the source code, algorithms, or internal logic of
+      the Software, including but not limited to the bytecode-compiled
+      tool modules, the license server protocol, or HMAC signing routines;
+  (c) Remove, alter, or obscure any copyright, trademark, license, or
+      proprietary notices contained within the Software;
+  (d) Use the Software to infringe upon the rights of others, to commit
+      illegal acts under applicable law, or to violate the Terms of Service
+      of any third-party platform;
+  (e) Bypass, disable, or tamper with the HWID lock, license verification,
+      or any other security mechanism of the Software;
+  (f) Develop, distribute, or use any cracked, patched, keygenned, or
+      otherwise unauthorized version of the Software;
+  (g) Use the Software's branding, name, or assets to create derivative
+      products, competing tools, or impersonate the Licensor.
+
+Violation of this Section results in immediate, automatic termination of
+the License without refund, and may result in civil and/or criminal
+liability under applicable copyright, computer fraud, and intellectual
+property laws.
+
+------------------------------------------------------------------------
+4. OWNERSHIP & INTELLECTUAL PROPERTY
+------------------------------------------------------------------------
+
+The Software is licensed, not sold. Licensor retains all right, title, and
+interest in and to the Software, including all copyrights, patents, trade
+secrets, trademarks, and other intellectual property rights. No rights
+are granted to Licensee other than those expressly set forth herein.
+
+The OKSI TOOL name, logo, and visual identity are trademarks of OKSI and
+may not be used without express written permission.
+
+------------------------------------------------------------------------
+5. THIRD-PARTY PLATFORM USAGE
+------------------------------------------------------------------------
+
+The Software interacts with third-party platforms (including but not
+limited to Discord Inc.). Such use may violate the Terms of Service of
+those platforms and may result in account suspension, termination, or
+other consequences imposed by the platform operator.
+
+LICENSEE ACKNOWLEDGES AND ACCEPTS FULL RESPONSIBILITY for any consequences
+arising from such use. Licensor expressly disclaims all liability for
+account actions taken by third-party platforms.
+
+------------------------------------------------------------------------
+6. REFUND POLICY
+------------------------------------------------------------------------
+
+Refunds are available within forty-eight (48) hours of license activation,
+no questions asked. After this period, all sales are final. To request a
+refund, contact support@oksi.dev with the order ID.
+
+HWID resets are available once every twenty-four (24) hours at no charge.
+Additional resets within the same period may incur a small administrative
+fee at Licensor's discretion.
+
+------------------------------------------------------------------------
+7. DISCLAIMER OF WARRANTY
+------------------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT,
+AND UNINTERRUPTED OR ERROR-FREE OPERATION.
+
+LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE FREE OF DEFECTS, THAT
+DEFECTS WILL BE CORRECTED, OR THAT THE SOFTWARE OR THE SERVERS THAT MAKE
+IT AVAILABLE ARE FREE OF HARMFUL COMPONENTS.
+
+------------------------------------------------------------------------
+8. LIMITATION OF LIABILITY
+------------------------------------------------------------------------
+
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL,
+SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO
+LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES,
+RESULTING FROM:
+
+  (a) Licensee's use or inability to use the Software;
+  (b) Account suspension or termination by third-party platforms;
+  (c) Unauthorized access to or alteration of Licensee's transmissions or
+      data;
+  (d) Any other matter relating to the Software.
+
+LICENSOR'S TOTAL CUMULATIVE LIABILITY UNDER THIS AGREEMENT SHALL NOT
+EXCEED THE AMOUNT PAID BY LICENSEE FOR THE LICENSE GIVING RISE TO THE
+CLAIM IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+
+------------------------------------------------------------------------
+9. TERMINATION
+------------------------------------------------------------------------
+
+This License is effective until terminated. It will terminate
+automatically and without notice if Licensee fails to comply with any
+provision of this Agreement. Licensor may also terminate this License at
+any time, with or without cause, with or without notice.
+
+Upon termination, Licensee shall immediately cease all use of the
+Software and destroy all copies in its possession or control.
+
+------------------------------------------------------------------------
+10. GOVERNING LAW
+------------------------------------------------------------------------
+
+This Agreement shall be governed by and construed in accordance with the
+laws of the Republic of Türkiye, without regard to its conflict of law
+provisions. Any disputes arising under this Agreement shall be resolved
+in the competent courts of Istanbul, Türkiye.
+
+------------------------------------------------------------------------
+11. ENTIRE AGREEMENT
+------------------------------------------------------------------------
+
+This Agreement constitutes the entire understanding between the parties
+regarding the Software and supersedes all prior or contemporaneous
+agreements, representations, or understandings, whether written or oral.
+
+If any provision of this Agreement is held to be unenforceable, such
+provision shall be modified to the minimum extent necessary to make it
+enforceable, and the remaining provisions shall continue in full force
+and effect.
+
+------------------------------------------------------------------------
+CONTACT
+------------------------------------------------------------------------
+
+OKSI
+Web:     https://oksi.dev
+Email:   support@oksi.dev
+
+By downloading, installing, activating, or using the Software, Licensee
+acknowledges that they have read, understood, and agree to be bound by
+the terms of this Agreement.
+
+— END OF LICENSE —
