@@ -37,11 +37,43 @@ banner() {
 banner
 
 # ─── Ortam kontrolü ────────────────────────────────────────────────
-if [ -z "$PREFIX" ] || [ ! -d "$PREFIX" ] || ! command -v pkg >/dev/null 2>&1; then
-    err "Bu script sadece Termux içinde çalışır."
+# Termux birden fazla sinyal verir — birinin tutması yeter:
+#   - $PREFIX env (Termux otomatik set eder, bazen alt-shell'de düşer)
+#   - $TERMUX_VERSION env
+#   - /data/data/com.termux/files/usr klasörü
+#   - pkg komutu PATH'te
+TERMUX_PREFIX_DEFAULT="/data/data/com.termux/files/usr"
+
+IS_TERMUX=0
+if [ -n "${TERMUX_VERSION:-}" ]; then IS_TERMUX=1; fi
+if [ -n "${PREFIX:-}" ] && [ -d "$PREFIX" ] && [ "$PREFIX" = "$TERMUX_PREFIX_DEFAULT" ]; then IS_TERMUX=1; fi
+if [ -d "$TERMUX_PREFIX_DEFAULT" ]; then IS_TERMUX=1; fi
+if command -v pkg >/dev/null 2>&1; then IS_TERMUX=1; fi
+
+if [ "$IS_TERMUX" -ne 1 ]; then
+    err "Termux algılanamadı."
+    err "  PREFIX=${PREFIX:-<boş>}"
+    err "  TERMUX_VERSION=${TERMUX_VERSION:-<boş>}"
+    err "  $TERMUX_PREFIX_DEFAULT exists: $([ -d "$TERMUX_PREFIX_DEFAULT" ] && echo yes || echo no)"
+    err "  pkg in PATH: $(command -v pkg >/dev/null 2>&1 && echo yes || echo no)"
     err "Termux: https://termux.dev/"
     exit 1
 fi
+
+# PREFIX'i kesinleştir (curl | bash içinde bazen düşüyor)
+if [ -z "${PREFIX:-}" ] || [ ! -d "${PREFIX:-/dev/null}" ]; then
+    PREFIX="$TERMUX_PREFIX_DEFAULT"
+    export PREFIX
+fi
+
+# PATH'e Termux bin'i ekle (gerekirse)
+case ":$PATH:" in
+    *":$PREFIX/bin:"*) ;;
+    *) export PATH="$PREFIX/bin:$PATH" ;;
+esac
+
+# Önerilen BIN_LINK'i de PREFIX'ten türet
+BIN_LINK="$PREFIX/bin/oksitool"
 
 ARCH_RAW=$(uname -m)
 case "$ARCH_RAW" in
