@@ -71,18 +71,20 @@ if [ -n "$NEED" ]; then
     pkg install -y $NEED >/dev/null 2>&1
 fi
 
-API_URL="https://api.github.com/repos/$GITHUB_REPO/releases/latest"
-LATEST_JSON=$(curl -fsSL --connect-timeout 15 "$API_URL" 2>/dev/null || true)
-if [ -z "$LATEST_JSON" ]; then
+API_URL="https://api.github.com/repos/$GITHUB_REPO/releases?per_page=30"
+LIST_JSON=$(curl -fsSL --connect-timeout 15 "$API_URL" 2>/dev/null || true)
+if [ -z "$LIST_JSON" ]; then
     err "İndirme sunucusuna ulaşılamadı."
     exit 1
 fi
 
-TAG=$(printf "%s" "$LATEST_JSON" | jq -r '.tag_name // empty')
-ASSET_URL=$(printf "%s" "$LATEST_JSON" | jq -r ".assets[] | select(.name | test(\"oksitool-termux-$ARCH-v.*\\\\.tar\\\\.gz\")) | .browser_download_url" | head -n1)
+TAG=$(printf "%s" "$LIST_JSON" | jq -r --arg arch "$ARCH" \
+    '[ .[] | select(.draft != true) | select(.prerelease != true) | select(.assets[]?.name | test("oksitool-termux-" + $arch + "-v.*\\.tar\\.gz")) ] | first | .tag_name // empty')
+ASSET_URL=$(printf "%s" "$LIST_JSON" | jq -r --arg arch "$ARCH" \
+    '[ .[] | select(.draft != true) | select(.prerelease != true) | .assets[]? | select(.name | test("oksitool-termux-" + $arch + "-v.*\\.tar\\.gz")) ] | first | .browser_download_url // empty')
 
 if [ -z "$TAG" ] || [ -z "$ASSET_URL" ]; then
-    err "Sürüm bulunamadı."
+    err "Termux için release bulunamadı."
     exit 1
 fi
 
