@@ -7,7 +7,7 @@
 
 <!-- ANIMATED TYPING -->
 <a href="https://oksi.dev">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=B87AFF&center=true&vCenter=true&width=620&lines=33%2B+%C3%B6zellik+%E2%80%A2+10+kategori+%E2%80%A2+tek+%2Eexe;Terminal+aray%C3%BCz+%E2%80%A2+Premium+%C3%BCyelik+sistemi;%C4%B0ndir+%E2%80%A2+%C3%87ift+t%C4%B1kla+%E2%80%A2+Kay%C4%B1t+ol+%E2%80%A2+Kullan;Windows+%E2%80%A2+macOS+%E2%80%A2+Linux+x64" alt="OKSI TOOL özellikler" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=B87AFF&center=true&vCenter=true&width=620&lines=33%2B+%C3%B6zellik+%E2%80%A2+10+kategori+%E2%80%A2+tek+%2Eexe;Terminal+aray%C3%BCz+%E2%80%A2+Premium+%C3%BCyelik+sistemi;%C4%B0ndir+%E2%80%A2+%C3%87ift+t%C4%B1kla+%E2%80%A2+Kay%C4%B1t+ol+%E2%80%A2+Kullan;Windows+%E2%80%A2+Android+(Termux)+%E2%80%A2+macOS+%E2%80%A2+Linux" alt="OKSI TOOL özellikler" />
 </a>
 
 <br/>
@@ -23,6 +23,7 @@
 <!-- BADGES — ROW 2 -->
 <p>
   <img src="https://img.shields.io/badge/Windows-10%2F11-0078D6?style=flat-square&logo=windows&logoColor=white&labelColor=120a22" alt="Windows" />
+  <img src="https://img.shields.io/badge/Android-Termux-3DDC84?style=flat-square&logo=android&logoColor=white&labelColor=120a22" alt="Android Termux" />
   <img src="https://img.shields.io/badge/macOS-11%2B-000000?style=flat-square&logo=apple&logoColor=white&labelColor=120a22" alt="macOS" />
   <img src="https://img.shields.io/badge/Linux-x64-FCC624?style=flat-square&logo=linux&logoColor=black&labelColor=120a22" alt="Linux" />
   <img src="https://img.shields.io/badge/Platform-Cross--Platform-b87aff?style=flat-square&labelColor=120a22" alt="Platform" />
@@ -331,6 +332,7 @@ flowchart LR
 | Platform | Dosya | Boyut | Durum |
 |:---:|:---:|:---:|:---:|
 | ![Win](https://img.shields.io/badge/-Windows%2010%2F11-0078D6?style=flat&logo=windows&logoColor=white) | `oksitool.exe` | `~52 MB` | ![Mevcut](https://img.shields.io/badge/-mevcut-2ee6a0?style=flat) |
+| ![Android](https://img.shields.io/badge/-Android%20(Termux)-3DDC84?style=flat&logo=android&logoColor=white) | `oksitool-termux-aarch64` | `~30 KB` | ![Mevcut](https://img.shields.io/badge/-mevcut-2ee6a0?style=flat) |
 | ![Mac](https://img.shields.io/badge/-macOS%2011%2B-000?style=flat&logo=apple&logoColor=white) | `oksitool-macos` | — | ![Yakında](https://img.shields.io/badge/-%C3%A7ok%20yak%C4%B1nda-b87aff?style=flat) |
 | ![Lin](https://img.shields.io/badge/-Linux%20x64-FCC624?style=flat&logo=linux&logoColor=black) | `oksitool-linux` | — | ![Yakında](https://img.shields.io/badge/-%C3%A7ok%20yak%C4%B1nda-b87aff?style=flat) |
 
@@ -388,15 +390,30 @@ Kayıt ol → `Hesabım` → oksi.dev'den aldığın key'i yapıştır.
 </details>
 
 <details>
-<summary><b>Termux için detaylı talimatlar</b></summary>
+<summary><b>🤖 Android (Termux) için kurulum</b></summary>
 <br/>
 
-```text
-ÇOKYAKINDA
+**1.** Önce **F-Droid** veya **GitHub** üzerinden **Termux** uygulamasını kur (Google Play sürümü çalışmaz):
+- F-Droid: https://f-droid.org/packages/com.termux/
+- GitHub: https://github.com/termux/termux-app/releases/latest (`termux-app_*_arm64-v8a.apk`)
+
+**2.** Termux'u aç, tek komutu yapıştır:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/nurshia/oksitool/main/install-termux.sh | bash
 ```
 
-</details>
+**3.** Kurulum biter bitmez:
 
+```bash
+oksitool
+```
+
+Script otomatik olarak `nodejs-lts`, `curl`, `jq`, `tar` paketlerini kurar, son sürümü `~/.oksitool/` altına indirir ve `oksitool` komutunu PATH'e bağlar. Otomatik güncelleme açıktır — sonraki açılışlarda yeni sürüm varsa kendiliğinden çekilir.
+
+> Sadece **aarch64 (64-bit ARM)** cihazlar destekleniyor. Çoğu güncel Android cihaz aarch64.
+
+</details>
 
 <details>
 <summary><b>🍎 macOS &nbsp;·&nbsp; <kbd>çok yakında</kbd></b></summary>
@@ -493,10 +510,13 @@ Tool seni izlemez, kullanım datası toplamaz.
 
 | | Minimum | Önerilen |
 |---|---|---|
-| **OS** | Windows 10 *(macOS/Linux çok yakında)* | Windows 11 |
+| **OS** | Windows 10 / Android 7+ (Termux) | Windows 11 / Android 12+ |
+| **Mimari** | x86_64 / aarch64 | — |
 | **RAM** | 512 MB | 1 GB |
 | **Disk** | 200 MB | 500 MB |
 | **Bağlantı** | Stabil internet | — |
+
+> macOS ve Linux x64 sürümleri çok yakında.
 
 <br/>
 
@@ -553,8 +573,10 @@ Yeni bir <code>.exe</code> olduğu için ilk açılışta SmartScreen uyarısı 
 - [x] Terminal tabanlı UI
 - [x] 33+ özellik · 10 kategori
 - [x] Windows desteği
+- [x] **Android (Termux) desteği** — aarch64
 - [x] Premium üyelik sistemi (key bazlı)
 - [x] Token Vault (şifreli)
+- [x] Otomatik güncelleme (mobil ve masaüstü)
 - [ ] **macOS sürümü** &nbsp;`çok yakında`
 - [ ] **Linux x64 sürümü** &nbsp;`çok yakında`
 - [ ] Direkt ödeme yöntemi (kart/havale)
