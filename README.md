@@ -433,6 +433,43 @@ Linux x64 sürümü üzerinde çalışıyoruz, **çok yakında** yayında olacak
 
 <br/>
 
+<!-- UNINSTALL -->
+### 🗑 Kaldırma
+
+<details>
+<summary><b>🪟 Windows'tan kaldırma</b></summary>
+<br/>
+
+```text
+1. oksitool.exe dosyasını sil
+2. %LOCALAPPDATA%\oksitool klasörünü sil (oturum + cache)
+```
+
+`%LOCALAPPDATA%\oksitool` içinde session token ve indirilen runtime modülleri durur. Klasörü silmek hesabını silmez — sadece bu cihazdaki tüm yerel iz kalkar.
+
+</details>
+
+<details>
+<summary><b>🤖 Android (Termux) kaldırma</b></summary>
+<br/>
+
+Termux'ta tek satır:
+
+```bash
+rm -rf ~/.oksitool && rm -f $PREFIX/bin/oksitool
+```
+
+- `~/.oksitool` → binary, launcher, node_modules, session
+- `$PREFIX/bin/oksitool` → PATH'e bağlanan komut symlink'i
+
+İsterseniz `nodejs-lts` ve diğer Termux paketlerini de kaldırabilirsiniz, ama başka şeyler için gerekebilir — opsiyonel.
+
+</details>
+
+> Hesabını tamamen silmek istiyorsan tool'da `Hesap & Çıkış` ekranından **Hesabı Sil** opsiyonunu kullan veya support@oksi.dev'e yaz. Dosyaları silmek hesabı sunucudan silmez.
+
+<br/>
+
 <!-- PRICING -->
 ## 💎 Fiyatlandırma
 
